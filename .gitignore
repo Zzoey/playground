@@ -1,0 +1,11 @@
+*.png
+*.pyc
+*.trch
+__pycache__
+*.p
+*-ubyte
+*.pt
+.ipynb_checkpoints*
+.vscode
+venv/
+*.csv
