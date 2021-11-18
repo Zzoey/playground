@@ -38,13 +38,15 @@ data = datasets.FashionMNIST(data_path, download=True, train=True)
 
 1. ```virtualenv -p python3 venv```
 2. ```source venv/bin/activate```
-3. ```pip install -r requirements.txt```
-4.  Download the data into the original_data folder
-5. ``` python mnist_to_png.py```
-6. Run test scripts if you wanna test but not necessary
-7. Make sure you have everything okay in ```config.py```
-8. ``` python train.py```
-9. ``` python inference.py``` - generates classification report of the test set. Overall accuracy ```~91%``` at this moment.
+3. ```cd code```
+4. ```pip install -r requirements.txt```
+5. ```cd ..```
+6.  Download the data into the original_data folder
+7. ``` python mnist_to_png.py```
+8. Run test scripts if you wanna test but not necessary
+9. Make sure you have everything okay in ```config.py```
+10. ``` python train.py```
+11. ``` python inference.py``` - generates classification report of the test set. Overall accuracy ```~91%``` at this moment.
 
 ### Note
 
@@ -52,6 +54,7 @@ data = datasets.FashionMNIST(data_path, download=True, train=True)
 
 2. Replace the data and change your parameters in the config and you should be able to test this library on new datasets. :)
 
+<!---
 ### Folder Structure
 
 .
@@ -88,5 +91,6 @@ data = datasets.FashionMNIST(data_path, download=True, train=True)
 │       ├── processed
 │       └── raw
 └── README.md
+-->
 
 
