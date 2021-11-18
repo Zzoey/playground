@@ -89,7 +89,8 @@ class Trainer:
             out_batch = self.model(x_batch)
             running_loss += self.criterion(out_batch, labels).item()
         running_loss /= le
-        print("epoch {} | cross_entropy_Loss : {}".format(e, running_loss))
+        print("Epoch: {} \tValidation Loss: {:.6f}".format(e + 1, running_loss))
+
         if running_loss < best_loss:
             best_loss = running_loss
             torch.save(self.model.state_dict(), self.path_model)
