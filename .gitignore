@@ -1,11 +1,4 @@
-*.png
-*.pyc
-*.trch
-__pycache__
-*.p
-*-ubyte
-*.pt
-.ipynb_checkpoints*
-.vscode
-venv/
-*.csv
+*.json
+__pycache__ 
+venv
+config.py
