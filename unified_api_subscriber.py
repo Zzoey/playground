@@ -1,4 +1,3 @@
-from os import name
 import argparse
 from unified_api import UnifiedApi
 
