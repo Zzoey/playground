@@ -27,6 +27,7 @@ data = datasets.FashionMNIST(data_path, download=True, train=True)
     - `dataset.py` - This python file contains a class that loads the data and returns the data loaders
     - `network.py` - Python file that contains the network architectures as classes
     - `trainer.py` - Python file that contains a generic class for training
+  -__test_scripts__ - Unit tests for Dataset and Network classes
    - __`test_dataset_class.py`__ - This python file contains a unit test to test `dataset.py` from utils
    - __`test_network_class.py`__ - This python file contains a unit test to test `network.py` from utils
 
