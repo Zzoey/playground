@@ -50,6 +50,11 @@ data = datasets.FashionMNIST(data_path, download=True, train=True)
 11. ``` python train.py```
 12. ``` python inference.py``` - generates classification report of the test set. Overall accuracy ```~91%``` at this moment.
 
+### To Test on a set of images
+13. Create a folder "inference_on_set_of_images" inside data folder and call it "input"
+14. place some images inside it 
+15. In ```inference.py``` uncoment the function call of ```inference_on_set_of_images```
+
 ### Note
 
 1. This code has been completely developed on Ubuntu 18.04 and not been tested on windows. I'm confident that it is written in such a way that it is OS agnostic but just in case if something comes up, feel free to reach out.
