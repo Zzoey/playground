@@ -1,4 +1,11 @@
 *.json
 __pycache__ 
-venv
-config.py
+*.png
+*.pyc
+*.trch
+*.p
+*-ubyte
+*.pt
+.ipynb_checkpoints*
+venv/
+*.csv
