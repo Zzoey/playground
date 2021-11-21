@@ -51,9 +51,9 @@ data = datasets.FashionMNIST(data_path, download=True, train=True)
 12. ``` python inference.py``` - generates classification report of the test set. Overall accuracy ```~91%``` at this moment.
 
 ### To Test on a set of images
-13. Create a folder "inference_on_set_of_images" inside data folder and call it "input"
-14. place some images inside it 
-15. In ```inference.py``` uncoment the function call of ```inference_on_set_of_images```
+13. Place some images inside "input" which is inside "inference_on_set_of_images" which is inside the data folder 
+14. In ```inference.py``` uncoment the function call of ```inference_on_set_of_images```
+15. This will generate ```output.csv``` from the set of images from input
 
 ### Note
 
