@@ -46,8 +46,9 @@ data = datasets.FashionMNIST(data_path, download=True, train=True)
 7. ``` python mnist_to_png.py```
 8. Run test scripts if you wanna test but not necessary
 9. Make sure you have everything okay in ```config.py```
-10. ``` python train.py```
-11. ``` python inference.py``` - generates classification report of the test set. Overall accuracy ```~91%``` at this moment.
+10. ```mkdir models```
+11. ``` python train.py```
+12. ``` python inference.py``` - generates classification report of the test set. Overall accuracy ```~91%``` at this moment.
 
 ### Note
 
