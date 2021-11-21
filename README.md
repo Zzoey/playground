@@ -2,10 +2,11 @@ __Part 2 :)__
 - __`unified_api.py`__ - Contains a class for the unified api an argument as a string
 - __`unified_api_publisher.py`__ - Driver script to use the __unified_api__ and as a publisher you can select __kafka__ service or __pubsub__ service by passing it as an argument
 - __`unified_api_subscriber.py`__ - Driver script to use the __unified_api__ and as a subscriber you can select __kafka__ service or __pubsub__ service by passing it as an argument
-- __`apache_kafka.py`__ - Contains a class for kafka publisher and kafka subscriber
-- __`google_pub_sub.py`__ - Contains a class for gcp publisher and gcp subscriber
-
 - __`config_copy.py`__ - Copy the contents of this file and create a new file called __config.py__ and add your respective paths to private keys, topic paths and subscription paths
+
+-  __utils__ - This folder contains publisher and subscriber classes for both pubsub and kafka services 
+   - __`apache_kafka.py`__ - Contains a class for kafka publisher and kafka subscriber
+   - __`google_pub_sub.py`__ - Contains a class for gcp publisher and gcp subscriber
 
 - __test__ - This folder contains publisher and subscriber tests for both pubsub and kafka services
   - __`gcp_publisher.py`__ - Driver script to test pubsub publisher

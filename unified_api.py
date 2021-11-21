@@ -1,6 +1,6 @@
 from config import *
-from apache_kafka import ApacheKafka
-from google_pub_sub import GcpPubSub
+from utils.apache_kafka import ApacheKafka
+from utils.google_pub_sub import GcpPubSub
 
 
 class UnifiedApi:
