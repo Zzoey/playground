@@ -10,7 +10,7 @@ Currently Kafka is being used but can be changed to pubsub in config.py
 - __`unified_api_publisher.py`__ - Driver script to use the __unified_api__ and as a publisher you can select __kafka__ service or __pubsub__ service by passing it as an argument
 - __`unified_api_subscriber.py`__ - Driver script to use the __unified_api__ and as a subscriber you can select __kafka__ service or __pubsub__ service by passing it as an argument
 
--  __utils__ - This folder contains publisher and subscriber classes for both pubsub and kafka services 
+-  __utils__ - This folder contains publisher and subscriber classes for both pubsub and kafka services
    - __`apache_kafka.py`__ - Contains a class for kafka publisher and kafka subscriber
    - __`google_pub_sub.py`__ - Contains a class for gcp publisher and gcp subscriber
    - __`dataset.py`__ - This python file contains a class that loads the data and returns the data loaders
@@ -32,3 +32,4 @@ Currently Kafka is being used but can be changed to pubsub in config.py
 ### Note
 
 1. Please check part1 and part2 branches for the classifer and unified api part
+2. If you are using kafka client, please have the zookeper and kafka server running in the background. Instructions are on part2 branch
