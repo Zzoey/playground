@@ -1,12 +1,14 @@
 import json
 from unified_api import UnifiedApi
+from config import api_name
 
 api_name = "kafka"
+topic_name = "results"
 
 u_api = UnifiedApi()
-messenger_object = u_api.selectApi(api_name)
-value, key = messenger_object.Subscriber()  # TODO: this should return prediction,
-true_val = json.loads(value)
+result_object = u_api.selectApi(api_name, topic_name)
 
-print("Printing what is received...")
-print(key, true_val)
+while 1:
+    (key, value) = result_object.Subscriber()
+    true_val = json.loads(value)
+    print("Predicted Label:", true_val)

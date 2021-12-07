@@ -3,14 +3,10 @@ import io
 from utils.dataset import Dataset
 from unified_api import UnifiedApi
 
-from config import test_path, val_pr, transform
-
-api_name = "kafka"
+from config import test_path, val_pr, transform, api_name
 
 
-def get_data():
-
-    test_data_loader = get_dataloader()
+def get_data(test_data_loader):
     dataloaders = test_data_loader.loadData()
     test_data = dataloaders["val"]
     return test_data
@@ -28,10 +24,11 @@ def get_dataloader():
     return testing_data_loaders
 
 
+# select the unified API
 u_api = UnifiedApi()
 messenger_object = u_api.selectApi(api_name)
-test_data = get_data()
 test_data_loader = get_dataloader()
+test_data = get_data(test_data_loader)
 
 print("Feeding test set!")
 
@@ -42,9 +39,9 @@ for i, img in enumerate(test_data):
         buff = io.BytesIO()
         torch.save(img, buff)
         buff.seek(0)
-        key = f"image-{i}-with-label-{label}"
-        messenger_object.Publisher(buff.getvalue(), key=key.encode())
-        print(f"Pushed an Image with {key}, labelled {text_label}_")
+        key = f"image-{i}-with-label-{text_label}"
+        messenger_object.Publisher((buff.getvalue(), key.encode()))
+        print(f"Pushed an Image labelled {text_label}")
     q = input("Press q to exit")
     if q == "q":
-        break
+        exit(0)

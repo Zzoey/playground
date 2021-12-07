@@ -5,7 +5,8 @@ from unified_api import UnifiedApi
 def main(api_name):
     api_obj = UnifiedApi()
     messenger_object = api_obj.selectApi(api_name)
-    messenger_object.Subscriber()
+    msg = messenger_object.Subscriber()
+    print(msg)
 
 
 if __name__ == "__main__":

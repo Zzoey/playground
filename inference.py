@@ -6,7 +6,16 @@ from sklearn.metrics import classification_report, confusion_matrix
 from utils.dataset import Dataset
 from utils.network import SimpleConvNet
 
-from config import *
+from config import (
+    trained_simple_conv_model,
+    device,
+    test_path,
+    val_pr,
+    transform,
+    batch_size,
+    num_classes,
+    operate_on_dirs_inference,
+)
 
 
 def get_data():
@@ -126,8 +135,4 @@ def main():
 if __name__ == "__main__":
     operate_on_dirs_inference()
     main()  # runs inference on the test set of the FashionMNIST
-<<<<<<< HEAD:inference.py
     # inference_on_set_of_images(input_path, output_path)  # run inference on set of images from a folder
-=======
-    #inference_on_set_of_images(input_path, output_path)  # run inference on set of images from a folder
->>>>>>> 0ac8a5cb458ced236447ca15c0c45742df00b206:code/inference.py
